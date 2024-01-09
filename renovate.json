@@ -58,7 +58,6 @@
   "ignoreReviewers": ["some-string"],
   "reviewers": ["some-string"],
   "additionalReviewers": ["some-string"],
-  "fileMatch": ["some-string"],
   "postUpdateOptions": ["some-string"],
   "hostRules": [
     {
