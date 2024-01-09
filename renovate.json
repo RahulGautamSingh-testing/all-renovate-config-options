@@ -36,7 +36,7 @@
       "excludePackagePatterns": ["string"],
       "excludePackagePrefixes": ["string"],
       "excludeRepositories": ["string"],
-      "matchCurrentValue": ["string"],
+      "matchCurrentValue": ["/string/"],
       "matchCurrentVersion": ["string"],
       "matchSourceUrlPrefixes": ["string"],
       "matchSourceUrls": ["string"],
@@ -69,7 +69,6 @@
       "password": "string",
       "hostType": "string",
       "matchHost": "string",
-      "resolvedHost": "string",
       "authType": "string",
       "insecureRegistry": false,
       "timeout": 1,
@@ -122,7 +121,7 @@
   "dependencyDashboardHeader": "This issue lists Renovate updates and detected dependencies. Read the [Dependency Dashboard](https://docs.renovatebot.com/key-concepts/dashboard/) docs to learn more.",
   "dependencyDashboardFooter": "some-string",
   "dependencyDashboardOSVVulnerabilitySummary": "none",
-  "timezone": "some-string",
+  "timezone": "Asia/Singapore",
   "npmrc": "some-string",
   "npmToken": "some-string",
   "useBaseBranchConfig": "none",
@@ -236,10 +235,12 @@
     "minimumReleaseAge": "renovate/stability-days"
   },
   "customDatasources": {
+    "k3s":  {
     "description": "string",
     "defaultRegistryUrlTemplate": "string",
     "format": "string",
     "transformTemplates": ["json"]
+  }
   },
   "encrypted": { "username": "username", "token": "token", "password": "p" },
   "registryAliases": {
