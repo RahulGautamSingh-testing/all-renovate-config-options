@@ -5,11 +5,11 @@
   "composerIgnorePlatformReqs": ["some-string"],
   "goGetDirs": ["some-string"],
   "dependencyDashboardLabels": ["some-string"],
-  "schedule": ["some-string"],
+  "schedule": [""after 7pm on Sunday""],
   "automergeSchedule": ["some-string"],
   "baseBranches": ["some-string"],
   "gitIgnoredAuthors": ["some-string"],
-  "enabledManagers": ["some-string"],
+  "enabledManagers": ["regex"],
   "includePaths": ["some-string"],
   "ignorePaths": ["some-string"],
   "excludeCommitPaths": ["some-string"],
@@ -22,7 +22,7 @@
       "matchLanguages": ["string"],
       "matchCategories": ["string"],
       "matchBaseBranches": ["string"],
-      "matchManagers": ["string"],
+      "matchManagers": ["regex"],
       "matchDatasources": ["string"],
       "matchDepTypes": ["string"],
       "matchDepNames": ["string"],
@@ -46,10 +46,13 @@
       "replacementName": "rname",
       "replacementNameTemplate": "template",
       "replacementVersion": "1.0.0",
-      "allowedVersions": ["<1.0.0"],
       "groupName": "haha",
       "groupSlug": "slug",
       "customChangelogUrl": "https://google.com"
+    },
+    {
+       "matchPackageNames": ["string"],
+       "allowedVersions": ["<1.0.0"]
     }
   ],
   "labels": ["some-string"],
@@ -100,7 +103,7 @@
       "description": "desc",
       "customType": "regex",
       "fileMatch": ["file"],
-      "matchStrings": "string",
+      "matchStrings": ["string"],
       "matchStringsStrategy": "any",
       "autoReplaceStringTemplate": "string",
       "depNameTemplate": "string",
@@ -108,7 +111,6 @@
       "versioningTemplate": "string",
       "depTypeTemplate": "string",
       "currentValueTemplate": "string",
-      "currentDigestTemplate": "string",
       "extractVersionTemplate": "string",
       "registryUrlTemplate": "string"
     }
@@ -244,8 +246,8 @@
     "example1": "http://www.example.com",
     "example2": "https://www.example2.com/example"
   },
-  "major": { "schedule": ["some schedule"], "matchFileNames": ["test"] },
-  "minor": { "schedule": ["some schedule"], "matchFileNames": ["test"] },
+  "major": { "schedule": ["after 7pm on Sunday"] },
+  "minor": { "schedule": ["after 7pm on Sunday"] },
   "patch": { "automerge": true },
   "pin": {
     "rebaseWhen": "behind-base-branch",
