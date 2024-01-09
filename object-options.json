@@ -1,0 +1,118 @@
+{
+  "postUpgradeTasks": {
+    "commands": ["string"],
+    "fileFilters": ["string"],
+    "executionMode": "update"
+  },
+  "statusCheckNames": {
+    "artifactError": "renovate/artifacts",
+    "configValidation": "renovate/config-validation",
+    "mergeConfidence": "renovate/merge-confidence",
+    "minimumReleaseAge": "renovate/stability-days"
+  },
+  "customDatasources": {
+    "k3s": {
+      "defaultRegistryUrlTemplate": "https://update.k3s.io/v1-release/channels",
+      "transformTemplates": [
+        "{\"releases\":[{\"version\": $$.(data[id = 'stable'].latest),\"sourceUrl\":\"https://github.com/k3s-io/k3s\",\"changelogUrl\":$join([\"https://github.com/k3s-io/k3s/releases/tag/\",data[id = 'stable'].latest])}],\"sourceUrl\": \"https://github.com/k3s-io/k3s\",\"homepage\": \"https://k3s.io/\"}"
+      ]
+    }
+  },
+  "encrypted": { "username": "username", "token": "token", "password": "p" },
+  "registryAliases": {
+    "example1": "http://www.example.com",
+    "example2": "https://www.example2.com/example"
+  },
+  "major": { "schedule": ["after 7pm on Sunday"] },
+  "minor": { "schedule": ["after 7pm on Sunday"] },
+  "patch": { "automerge": true },
+  "pin": {
+    "rebaseWhen": "behind-base-branch",
+    "groupName": "Pin Dependencies",
+    "groupSlug": "pin-dependencies",
+    "commitMessageAction": "Pin",
+    "group": {
+      "commitMessageTopic": "dependencies",
+      "commitMessageExtra": ""
+    }
+  },
+  "digest": {
+    "branchTopic": "{{{depNameSanitized}}}-digest",
+    "commitMessageExtra": "to {{newDigestShort}}",
+    "commitMessageTopic": "{{{depName}}} digest"
+  },
+  "pinDigest": {
+    "groupName": "Pin Dependencies",
+    "groupSlug": "pin-dependencies",
+    "commitMessageAction": "Pin",
+    "group": {
+      "commitMessageTopic": "dependencies",
+      "commitMessageExtra": ""
+    }
+  },
+  "rollback": {
+    "branchTopic": "{{{depNameSanitized}}}-replacement",
+    "commitMessageAction": "Replace",
+    "commitMessageExtra": "with {{newName}} {{#if isMajor}}{{{prettyNewMajor}}}{{else}}{{#if isSingleVersion}}{{{prettyNewVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
+    "prBodyNotes": [
+      "This is a special PR that replaces `{{{depName}}}` with the community suggested minimal stable replacement version."
+    ]
+  },
+  "replacement": {
+    "branchTopic": "{{{depNameSanitized}}}-replacement",
+    "commitMessageAction": "Replace",
+    "commitMessageExtra": "with {{newName}} {{#if isMajor}}{{{prettyNewMajor}}}{{else}}{{#if isSingleVersion}}{{{prettyNewVersion}}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
+    "prBodyNotes": [
+      "This is a special PR that replaces `{{{depName}}}` with the community suggested minimal stable replacement version."
+    ]
+  },
+  "vulnerabilityAlerts": {
+    "groupName": null,
+    "schedule": [],
+    "dependencyDashboardApproval": false,
+    "minimumReleaseAge": null,
+    "rangeStrategy": "update-lockfile",
+    "commitMessageSuffix": "[SECURITY]",
+    "branchTopic": "{{{datasource}}}-{{{depName}}}-vulnerability",
+    "prCreation": "immediate"
+  },
+  "customizeDashboard": {},
+  "lockFileMaintenance": {
+    "enabled": false,
+    "recreateWhen": "always",
+    "rebaseStalePrs": true,
+    "branchTopic": "lock-file-maintenance",
+    "commitMessageAction": "Lock file maintenance",
+    "commitMessageTopic": null,
+    "commitMessageExtra": null,
+    "schedule": ["before 4am on monday"],
+    "groupName": null,
+    "prBodyDefinitions": { "Change": "All locks refreshed" }
+  },
+  "group": {
+    "branchTopic": "{{{groupSlug}}}",
+    "commitMessageTopic": "{{{groupName}}}"
+  },
+  "constraints": { "node": ">=12", "npm": "^6.0.0" },
+  "prBodyDefinitions": {
+    "Package": "{{{depNameLinked}}}",
+    "Type": "{{{depType}}}",
+    "Update": "{{{updateType}}}",
+    "Current value": "{{{currentValue}}}",
+    "New value": "{{{newValue}}}",
+    "Change": "`{{{displayFrom}}}` -> `{{{displayTo}}}`",
+    "Pending": "{{{displayPending}}}",
+    "References": "{{{references}}}",
+    "Package file": "{{{packageFile}}}",
+    "Age": "[![age](https://developer.mend.io/api/mc/badges/age/{{datasource}}/{{replace '/' '%2f' depName}}/{{{newVersion}}}?slim=true)](https://docs.renovatebot.com/merge-confidence/)",
+    "Adoption": "[![adoption](https://developer.mend.io/api/mc/badges/adoption/{{datasource}}/{{replace '/' '%2f' depName}}/{{{newVersion}}}?slim=true)](https://docs.renovatebot.com/merge-confidence/)",
+    "Passing": "[![passing](https://developer.mend.io/api/mc/badges/compatibility/{{datasource}}/{{replace '/' '%2f' depName}}/{{{currentVersion}}}/{{{newVersion}}}?slim=true)](https://docs.renovatebot.com/merge-confidence/)",
+    "Confidence": "[![confidence](https://developer.mend.io/api/mc/badges/confidence/{{datasource}}/{{replace '/' '%2f' depName}}/{{{currentVersion}}}/{{{newVersion}}}?slim=true)](https://docs.renovatebot.com/merge-confidence/)"
+  },
+  "userStrings": {
+    "ignoreTopic": "Renovate Ignore Notification",
+    "ignoreMajor": "Because you closed this PR without merging, Renovate will ignore this update. You will not get PRs for *any* future `{{{newMajor}}}.x` releases. But if you manually upgrade to `{{{newMajor}}}.x` then Renovate will re-enable `minor` and `patch` updates automatically.",
+    "ignoreDigest": "Because you closed this PR without merging, Renovate will ignore this update. You will not get PRs for the `{{{depName}}}` `{{{newDigestShort}}}` update again.",
+    "ignoreOther": "Because you closed this PR without merging, Renovate will ignore this update (`{{{newValue}}}`). You will get a PR once a newer version is released. To ignore this dependency forever, add it to the `ignoreDeps` array of your Renovate config."
+  }
+}
