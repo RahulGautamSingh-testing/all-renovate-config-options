@@ -1,0 +1,11 @@
+{
+  "azureWorkItemId": 0,
+  "prNotPendingHours": 25,
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "branchConcurrentLimit": 1,
+  "prPriority": 0,
+  "hashedBranchLength": 1,
+  "assigneesSampleSize": 1,
+  "reviewersSampleSize": 1
+}
