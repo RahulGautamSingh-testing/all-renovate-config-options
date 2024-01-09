@@ -5,7 +5,7 @@
   "composerIgnorePlatformReqs": ["some-string"],
   "goGetDirs": ["some-string"],
   "dependencyDashboardLabels": ["some-string"],
-  "schedule": [""after 7pm on Sunday""],
+  "schedule": ["after 7pm on Sunday"],
   "automergeSchedule": ["some-string"],
   "baseBranches": ["some-string"],
   "gitIgnoredAuthors": ["some-string"],
