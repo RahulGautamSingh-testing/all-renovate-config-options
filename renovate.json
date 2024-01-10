@@ -1,48 +1,125 @@
 {
-  "extends": ["some-string"],
-  "ignorePresets": ["some-string"],
-  "description": ["some-string"],
-  "composerIgnorePlatformReqs": ["some-string"],
-  "goGetDirs": ["some-string"],
-  "dependencyDashboardLabels": ["some-string"],
-  "schedule": ["after 7pm on Sunday"],
-  "automergeSchedule": ["some-string"],
-  "baseBranches": ["some-string"],
-  "gitIgnoredAuthors": ["some-string"],
-  "enabledManagers": ["regex"],
-  "includePaths": ["some-string"],
-  "ignorePaths": ["some-string"],
-  "excludeCommitPaths": ["some-string"],
-  "defaultRegistryUrls": ["some-string"],
-  "registryUrls": ["some-string"],
-  "ignoreDeps": ["some-string"],
+  "extends": [
+    "some-string"
+  ],
+  "ignorePresets": [
+    "some-string"
+  ],
+  "description": [
+    "some-string"
+  ],
+  "composerIgnorePlatformReqs": [
+    "some-string"
+  ],
+  "goGetDirs": [
+    "some-string"
+  ],
+  "dependencyDashboardLabels": [
+    "some-string"
+  ],
+  "schedule": [
+    "after 7pm on Sunday"
+  ],
+  "automergeSchedule": [
+    "some-string"
+  ],
+  "baseBranches": [
+    "some-string"
+  ],
+  "gitIgnoredAuthors": [
+    "some-string"
+  ],
+  "enabledManagers": [
+    "custom.regex"
+  ],
+  "includePaths": [
+    "some-string"
+  ],
+  "ignorePaths": [
+    "some-string"
+  ],
+  "excludeCommitPaths": [
+    "some-string"
+  ],
+  "defaultRegistryUrls": [
+    "some-string"
+  ],
+  "registryUrls": [
+    "some-string"
+  ],
+  "ignoreDeps": [
+    "some-string"
+  ],
   "packageRules": [
     {
-      "matchFileNames": ["string"],
-      "matchLanguages": ["string"],
-      "matchCategories": ["string"],
-      "matchBaseBranches": ["string"],
-      "matchManagers": ["regex"],
-      "matchDatasources": ["string"],
-      "matchDepTypes": ["string"],
-      "matchDepNames": ["string"],
-      "matchDepPatterns": ["string"],
-      "matchPackageNames": ["string"],
-      "matchPackagePatterns": ["string"],
-      "matchPackagePrefixes": ["string"],
-      "excludeDepNames": ["string"],
-      "excludeDepPatterns": ["string"],
-      "excludePackageNames": ["string"],
-      "excludePackagePatterns": ["string"],
-      "excludePackagePrefixes": ["string"],
-      "excludeRepositories": ["string"],
-      "matchCurrentValue": ["/string/"],
-      "matchCurrentVersion": ["string"],
-      "matchSourceUrlPrefixes": ["string"],
-      "matchSourceUrls": ["string"],
-      "matchUpdateTypes": ["string"],
-      "matchConfidence": ["string"],
-      "matchRepositories": ["string"],
+      "matchFileNames": [
+        "string"
+      ],
+      "matchCategories": [
+        "string"
+      ],
+      "matchBaseBranches": [
+        "string"
+      ],
+      "matchManagers": [
+        "custom.regex"
+      ],
+      "matchDatasources": [
+        "string"
+      ],
+      "matchDepTypes": [
+        "string"
+      ],
+      "matchDepNames": [
+        "string"
+      ],
+      "matchDepPatterns": [
+        "string"
+      ],
+      "matchPackageNames": [
+        "string"
+      ],
+      "matchPackagePatterns": [
+        "string"
+      ],
+      "matchPackagePrefixes": [
+        "string"
+      ],
+      "excludeDepNames": [
+        "string"
+      ],
+      "excludeDepPatterns": [
+        "string"
+      ],
+      "excludePackageNames": [
+        "string"
+      ],
+      "excludePackagePatterns": [
+        "string"
+      ],
+      "excludePackagePrefixes": [
+        "string"
+      ],
+      "excludeRepositories": [
+        "string"
+      ],
+      "matchCurrentValue": "/string/",
+      "matchCurrentVersion": "string",
+      "matchSourceUrlPrefixes": [
+        "string"
+      ],
+      "matchSourceUrls": [
+        "string"
+      ],
+      "matchUpdateTypes": [
+        "string"
+      ],
+      "matchConfidence": [
+        "string"
+      ],
+      "matchRepositories": [
+        "string"
+      ],
       "replacementName": "rname",
       "replacementNameTemplate": "template",
       "replacementVersion": "1.0.0",
@@ -51,17 +128,33 @@
       "customChangelogUrl": "https://google.com"
     },
     {
-       "matchPackageNames": ["string"],
-       "allowedVersions": ["<1.0.0"]
+      "matchPackageNames": [
+        "string"
+      ],
+      "allowedVersions": "<1.0.0"
     }
   ],
-  "labels": ["some-string"],
-  "addLabels": ["some-string"],
-  "assignees": ["some-string"],
-  "ignoreReviewers": ["some-string"],
-  "reviewers": ["some-string"],
-  "additionalReviewers": ["some-string"],
-  "postUpdateOptions": ["some-string"],
+  "labels": [
+    "some-string"
+  ],
+  "addLabels": [
+    "some-string"
+  ],
+  "assignees": [
+    "some-string"
+  ],
+  "ignoreReviewers": [
+    "some-string"
+  ],
+  "reviewers": [
+    "some-string"
+  ],
+  "additionalReviewers": [
+    "some-string"
+  ],
+  "postUpdateOptions": [
+    "some-string"
+  ],
   "hostRules": [
     {
       "token": "string",
@@ -73,7 +166,9 @@
       "insecureRegistry": false,
       "timeout": 1,
       "abortOnError": false,
-      "abortIgnoreStatusCodes": [1],
+      "abortIgnoreStatusCodes": [
+        1
+      ],
       "enabled": false,
       "enableHttp2": false,
       "concurrentRequestLimit": 1,
@@ -81,28 +176,39 @@
       "maxRetryAfter": 1,
       "dnsCache": false,
       "keepAlive": false,
-      "artifactAuth": ["string"],
+      "artifactAuth": [
+        "string"
+      ],
       "httpsCertificateAuthority": "string",
       "httpsPrivateKey": "string",
       "httpsCertificate": "string"
     },
     {
-      "platform": "docker",
-      "endpoint": "https://docker.io",
+      "hostType": "docker",
+      "matchHost": "https://docker.io",
       "username": "some-username",
       "password": "some-password"
     }
   ],
-
-  "prBodyColumns": ["some-string"],
-  "prBodyNotes": ["some-string"],
-  "suppressNotifications": ["some-string"],
+  "prBodyColumns": [
+    "some-string"
+  ],
+  "prBodyNotes": [
+    "some-string"
+  ],
+  "suppressNotifications": [
+    "some-string"
+  ],
   "customManagers": [
     {
       "description": "desc",
       "customType": "regex",
-      "fileMatch": ["file"],
-      "matchStrings": ["string"],
+      "fileMatch": [
+        "file"
+      ],
+      "matchStrings": [
+        "string"
+      ],
       "matchStringsStrategy": "any",
       "autoReplaceStringTemplate": "string",
       "depNameTemplate": "string",
@@ -114,7 +220,6 @@
       "registryUrlTemplate": "string"
     }
   ],
-
   "constraintsFiltering": "none",
   "forkProcessing": "auto",
   "dependencyDashboardTitle": "Dependency Dashboard",
@@ -165,7 +270,6 @@
   "groupName": "some-string",
   "groupSlug": "some-string",
   "fetchChangeLogs": "pr",
-
   "configMigration": true,
   "enabled": true,
   "draftPR": true,
@@ -224,8 +328,12 @@
   "assigneesSampleSize": 1,
   "reviewersSampleSize": 1,
   "postUpgradeTasks": {
-    "commands": ["string"],
-    "fileFilters": ["string"],
+    "commands": [
+      "string"
+    ],
+    "fileFilters": [
+      "string"
+    ],
     "executionMode": "update"
   },
   "statusCheckNames": {
@@ -234,7 +342,7 @@
     "mergeConfidence": "renovate/merge-confidence",
     "minimumReleaseAge": "renovate/stability-days"
   },
- "customDatasources": {
+  "customDatasources": {
     "k3s": {
       "defaultRegistryUrlTemplate": "https://update.k3s.io/v1-release/channels",
       "transformTemplates": [
@@ -242,14 +350,28 @@
       ]
     }
   },
-  "encrypted": { "username": "username", "token": "token", "password": "p" },
+  "encrypted": {
+    "username": "username",
+    "token": "token",
+    "password": "p"
+  },
   "registryAliases": {
     "example1": "http://www.example.com",
     "example2": "https://www.example2.com/example"
   },
-  "major": { "schedule": ["after 7pm on Sunday"] },
-  "minor": { "schedule": ["after 7pm on Sunday"] },
-  "patch": { "automerge": true },
+  "major": {
+    "schedule": [
+      "after 7pm on Sunday"
+    ]
+  },
+  "minor": {
+    "schedule": [
+      "after 7pm on Sunday"
+    ]
+  },
+  "patch": {
+    "automerge": true
+  },
   "pin": {
     "rebaseWhen": "behind-base-branch",
     "groupName": "Pin Dependencies",
@@ -304,20 +426,27 @@
   "lockFileMaintenance": {
     "enabled": false,
     "recreateWhen": "always",
-    "rebaseStalePrs": true,
+    "rebaseWhen": "behind-base-branch",
     "branchTopic": "lock-file-maintenance",
     "commitMessageAction": "Lock file maintenance",
     "commitMessageTopic": null,
     "commitMessageExtra": null,
-    "schedule": ["before 4am on monday"],
+    "schedule": [
+      "before 4am on monday"
+    ],
     "groupName": null,
-    "prBodyDefinitions": { "Change": "All locks refreshed" }
+    "prBodyDefinitions": {
+      "Change": "All locks refreshed"
+    }
   },
   "group": {
     "branchTopic": "{{{groupSlug}}}",
     "commitMessageTopic": "{{{groupName}}}"
   },
-  "constraints": { "node": ">=12", "npm": "^6.0.0" },
+  "constraints": {
+    "node": ">=12",
+    "npm": "^6.0.0"
+  },
   "prBodyDefinitions": {
     "Package": "{{{depNameLinked}}}",
     "Type": "{{{depType}}}",
