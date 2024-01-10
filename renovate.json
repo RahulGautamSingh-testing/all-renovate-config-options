@@ -234,13 +234,13 @@
     "mergeConfidence": "renovate/merge-confidence",
     "minimumReleaseAge": "renovate/stability-days"
   },
-  "customDatasources": {
-    "k3s":  {
-    "description": "string",
-    "defaultRegistryUrlTemplate": "string",
-    "format": "string",
-    "transformTemplates": ["json"]
-  }
+ "customDatasources": {
+    "k3s": {
+      "defaultRegistryUrlTemplate": "https://update.k3s.io/v1-release/channels",
+      "transformTemplates": [
+        "{\"releases\":[{\"version\": $$.(data[id = 'stable'].latest),\"sourceUrl\":\"https://github.com/k3s-io/k3s\",\"changelogUrl\":$join([\"https://github.com/k3s-io/k3s/releases/tag/\",data[id = 'stable'].latest])}],\"sourceUrl\": \"https://github.com/k3s-io/k3s\",\"homepage\": \"https://k3s.io/\"}"
+      ]
+    }
   },
   "encrypted": { "username": "username", "token": "token", "password": "p" },
   "registryAliases": {
