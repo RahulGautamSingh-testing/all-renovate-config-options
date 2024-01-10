@@ -125,7 +125,7 @@
   "npmrc": "some-string",
   "npmToken": "some-string",
   "useBaseBranchConfig": "none",
-  "gitAuthor": "some-string",
+  "gitAuthor": "somebot <haah@gmail.com>",
   "extractVersion": "some-string",
   "versionCompatibility": "some-string",
   "versioning": "some-string",
